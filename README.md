@@ -1,8 +1,7 @@
 [![N|Solid](https://universidadedevassouras.edu.br/wp-content/uploads/2022/03/campus_marica.png)](https://universidadedevassouras.edu.br/campus-marica/)
 
 # Curso: Engenharia de Software
-# Alunos: Diego Rios dos Santos (202010774).
-# Lucas De Santana Pulcherio(202211037).
+# Alunos: Diego Rios dos Santos (202010774), Lucas De Santana Pulcherio(202211037).
 # Disciplina: Estrutura de dados 3º Periodo
 # Professor: Marcio Alexandre Dias Garrido
 
