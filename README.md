@@ -20,3 +20,8 @@ Os alunos anotaram atentamente a todas as observações, criaram o fluxograma do
 # Solução do Grupo:
 
 
+# Fluxograma:
+Foi Feito Um Fluxograma do Projeto, Com Intuito de Organizar o Caso para Maior Entendimendo  do protótipo em python.
+![Fluxograma final](https://github.com/DiegoWebwork/estruturadedadosp2/assets/127268469/7093bc69-31d5-45da-8415-daa035dc7ede)
+
+
