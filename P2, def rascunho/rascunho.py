@@ -13,7 +13,21 @@ class Pessoa:
         self.especie_interesse = especie_interesse
         self.preferencia_animal = preferencia_animal
         
-# Esse def e o de para inserir novo tipo de animal, dps so arrumamos o codigo.
+class Fila:
+    def __init__(self):
+        self.items = []
+
+    def enfileirar(self, item):
+        self.items.append(item)
+
+    def desenfileirar(self):
+        if not self.esta_vazia():
+            return self.items.pop(0)
+
+    def esta_vazia(self):
+        return len(self.items) == 0
+        
+#dps so arrumamos o codigo.
 def inserir_tipo_animal(dicionario_animais):
     tipo = input("Digite o novo tipo de animal: ")
     dicionario_animais[tipo] = []
