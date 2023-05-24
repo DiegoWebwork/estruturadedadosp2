@@ -5,8 +5,15 @@ class Animal:
         self.cor = cor
         self.porte = porte
         self.particularidade = particularidade
-
-# Esse def e o de para inserir novo tipo de animal, pode olhar  e ver se ta tudo certo dps eu finalizo essa parte e mando aq. dps so arrumamos o codigo.
+        
+class Pessoa:
+    def __init__(self, nome, contato, especie_interesse, preferencia_animal):
+        self.nome = nome
+        self.contato = contato
+        self.especie_interesse = especie_interesse
+        self.preferencia_animal = preferencia_animal
+        
+# Esse def e o de para inserir novo tipo de animal, dps so arrumamos o codigo.
 def inserir_tipo_animal(dicionario_animais):
     tipo = input("Digite o novo tipo de animal: ")
     dicionario_animais[tipo] = []
