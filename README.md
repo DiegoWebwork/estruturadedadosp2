@@ -20,7 +20,7 @@ Os alunos anotaram atentamente a todas as observações, criaram o fluxograma do
 
 
 # Solução do Grupo:
-
+Sera Criado um sistema de gerenciamento de adoção de animais. Esse sistema permitirá cadastrar os animais disponíveis para adoção, bem como as informações relacionadas a eles, e também cadastrar pessoas interessadas em adotar um animal.
 
 # Fluxograma:
 Foi Feito Um Fluxograma do Projeto, Com Intuito de Organizar o Caso para Maior Entendimendo  do protótipo em python.
