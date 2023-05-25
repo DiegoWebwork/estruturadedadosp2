@@ -26,7 +26,21 @@ class Fila:
 
     def esta_vazia(self):
         return len(self.items) == 0
-        
+
+class Pilha:
+    def __init__(self):
+        self.items = []
+
+    def empilhar(self, item):
+        self.items.append(item)
+
+    def desempilhar(self):
+        if not self.esta_vazia():
+            return self.items.pop()
+
+    def esta_vazia(self):
+        return len(self.items) == 0    
+    
 #dps so arrumamos o codigo.
 def inserir_tipo_animal(dicionario_animais):
     tipo = input("Digite o novo tipo de animal: ")
