@@ -33,3 +33,6 @@ class SistemaAdocao:
     def cadastrar_interessado(self, interessado):
         self.interessados.append(interessado)
         
+# Método para pesquisar animal por características
+    def pesquisar_animal(self, tipo, idade, cor, porte, particularidade):
+        resultados = []
