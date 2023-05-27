@@ -19,7 +19,11 @@ class Interessado:
         self.especie = especie
         self.preferencia = preferencia
         print("Tipo de animal não existe.")
-
         
+  # Classe para representar o sistema de adoção
+class SistemaAdocao:
+    def __init__(self):
+        self.animais = []
+        self.interessados = []
         
         
