@@ -26,4 +26,6 @@ class SistemaAdocao:
         self.animais = []
         self.interessados = []
         
-        
+# Método para cadastrar um animal
+    def cadastrar_animal(self, animal):
+        self.animais.append(animal)        
