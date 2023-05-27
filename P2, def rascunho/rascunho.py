@@ -36,3 +36,13 @@ class SistemaAdocao:
 # Método para pesquisar animal por características
     def pesquisar_animal(self, tipo, idade, cor, porte, particularidade):
         resultados = []
+        for animal in self.animais:
+            if (
+                animal.tipo == tipo
+                and animal.idade == idade
+                and animal.cor == cor
+                and animal.porte == porte
+                and animal.particularidade == particularidade
+            ):
+                resultados.append(animal)
+        return resultados
