@@ -60,3 +60,8 @@ class SistemaAdocao:
             )
             relatorio.append((interessado, candidatos))
         return relatorio
+    
+    # Função para tratar erros de entrada inválida do usuário
+def tratar_erro():
+    print("Entrada inválida. Tente novamente.")
+    sys.exit(1)
