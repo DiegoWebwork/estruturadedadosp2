@@ -46,3 +46,7 @@ class SistemaAdocao:
             ):
                 resultados.append(animal)
         return resultados
+    
+    # Método para gerar relatório de cruzamento de espécies disponíveis x possíveis candidatos
+    def gerar_relatorio(self):
+        relatorio = []
