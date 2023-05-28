@@ -75,3 +75,10 @@ def exibir_menu():
     print("5. Sair")
     escolha = input("Escolha uma opção: ")
     return escolha
+# Função para cadastrar um animal
+def cadastrar_animal(sistema):
+    tipo = input("Tipo do animal: ")
+    idade = input("Idade aproximada: ")
+    cor = input("Cor: ")
+    porte = input("Porte: ")
+    particularidade = input("Particularidade: ")
