@@ -65,3 +65,13 @@ class SistemaAdocao:
 def tratar_erro():
     print("Entrada inválida. Tente novamente.")
     sys.exit(1)
+    
+def exibir_menu():
+    print("=== Sistema de Adoção de Animais ===")
+    print("1. Cadastrar animal")
+    print("2. Cadastrar interessado")
+    print("3. Pesquisar animal por características")
+    print("4. Gerar relatório")
+    print("5. Sair")
+    escolha = input("Escolha uma opção: ")
+    return escolha
