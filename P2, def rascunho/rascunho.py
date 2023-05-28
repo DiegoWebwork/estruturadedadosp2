@@ -50,3 +50,13 @@ class SistemaAdocao:
     # Método para gerar relatório de cruzamento de espécies disponíveis x possíveis candidatos
     def gerar_relatorio(self):
         relatorio = []
+        for interessado in self.interessados:
+            candidatos = self.pesquisar_animal(
+                interessado.especie,
+                None,
+                None,
+                None,
+                interessado.preferencia
+            )
+            relatorio.append((interessado, candidatos))
+        return relatorio
