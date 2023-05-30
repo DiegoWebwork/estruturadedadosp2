@@ -101,3 +101,8 @@ def cadastrar_interessado(sistema):
     particularidade = input("Particularidade: ")
     resultados = sistema.pesquisar_animal(tipo, idade, cor, porte, particularidade)
     if len(resultados) > 0:
+        print("Animais encontrados:")
+        for animal in resultados:
+            print(animal.tipo, animal.idade, animal.cor, animal.porte, animal.particularidade)
+    else:
+        print("Nenhum animal encontrado.")
