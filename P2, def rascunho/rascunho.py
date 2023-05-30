@@ -92,3 +92,12 @@ def cadastrar_interessado(sistema):
     interessado = Interessado(nome, contato, especie, preferencia)
     sistema.cadastrar_interessado(interessado)
     print("Interessado cadastrado com sucesso!")
+    
+ def pesquisar_animal(sistema):
+    tipo = input("Tipo do animal: ")
+    idade = input("Idade aproximada: ")
+    cor = input("Cor: ")
+    porte = input("Porte: ")
+    particularidade = input("Particularidade: ")
+    resultados = sistema.pesquisar_animal(tipo, idade, cor, porte, particularidade)
+    if len(resultados) > 0:
