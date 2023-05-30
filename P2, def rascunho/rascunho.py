@@ -111,3 +111,7 @@ def cadastrar_interessado(sistema):
 def gerar_relatorio(sistema):
     relatorio = sistema.gerar_relatorio()
     if len(relatorio) > 0:
+        print("Relatório de cruzamento de espécies disponíveis x possíveis candidatos:")
+        for interessado, candidatos in relatorio:
+            print("Interessado:", interessado.nome, interessado.contato)
+            print("Candidatos:")
