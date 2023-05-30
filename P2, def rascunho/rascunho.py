@@ -106,3 +106,8 @@ def cadastrar_interessado(sistema):
             print(animal.tipo, animal.idade, animal.cor, animal.porte, animal.particularidade)
     else:
         print("Nenhum animal encontrado.")
+    
+    # Função para gerar relatório
+def gerar_relatorio(sistema):
+    relatorio = sistema.gerar_relatorio()
+    if len(relatorio) > 0:
