@@ -82,3 +82,13 @@ def cadastrar_animal(sistema):
     cor = input("Cor: ")
     porte = input("Porte: ")
     particularidade = input("Particularidade: ")
+    
+# Função para cadastrar um interessado
+def cadastrar_interessado(sistema):
+    nome = input("Nome: ")
+    contato = input("Contato: ")
+    especie = input("Espécie de animal desejada: ")
+    preferencia = input("Preferência do animal: ")
+    interessado = Interessado(nome, contato, especie, preferencia)
+    sistema.cadastrar_interessado(interessado)
+    print("Interessado cadastrado com sucesso!")
