@@ -123,3 +123,9 @@ def gerar_relatorio(sistema):
 # Função principal
 def main():
     sistema = SistemaAdocao()
+    while True:
+        escolha = exibir_menu()
+        if escolha == "1":
+            cadastrar_animal(sistema)
+        elif escolha == "2":
+            cadastrar_interessado(sistema)
