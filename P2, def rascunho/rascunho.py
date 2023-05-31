@@ -129,3 +129,11 @@ def main():
             cadastrar_animal(sistema)
         elif escolha == "2":
             cadastrar_interessado(sistema)
+        elif escolha == "3":
+            pesquisar_animal(sistema)
+        elif escolha == "4":
+            gerar_relatorio(sistema)
+        elif escolha == "5":
+            sys.exit(0)
+        else:
+            tratar_erro()
