@@ -115,3 +115,5 @@ def gerar_relatorio(sistema):
         for interessado, candidatos in relatorio:
             print("Interessado:", interessado.nome, interessado.contato)
             print("Candidatos:")
+            for animal in candidatos:
+                print(animal.tipo, animal.idade, animal.cor, animal.porte, animal.particularidade)
