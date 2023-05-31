@@ -117,3 +117,5 @@ def gerar_relatorio(sistema):
             print("Candidatos:")
             for animal in candidatos:
                 print(animal.tipo, animal.idade, animal.cor, animal.porte, animal.particularidade)
+    else:
+        print("Nenhum interessado cadastrado.")
