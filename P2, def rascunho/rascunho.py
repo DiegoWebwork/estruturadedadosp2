@@ -107,7 +107,7 @@ def cadastrar_interessado(sistema):
     else:
         print("Nenhum animal encontrado.")
     
-    # Função para gerar relatório
+ # Função para gerar relatório
 def gerar_relatorio(sistema):
     relatorio = sistema.gerar_relatorio()
     if len(relatorio) > 0:
@@ -119,3 +119,7 @@ def gerar_relatorio(sistema):
                 print(animal.tipo, animal.idade, animal.cor, animal.porte, animal.particularidade)
     else:
         print("Nenhum interessado cadastrado.")
+        
+# Função principal
+def main():
+    sistema = SistemaAdocao()
