@@ -18,22 +18,22 @@ class Interessado:
         self.contato = contato
         self.especie = especie
         self.preferencia = preferencia
-        print("Tipo de animal não existe.")
-        
-  # Classe para representar o sistema de adoção
+
+# Classe para representar o sistema de adoção
 class SistemaAdocao:
     def __init__(self):
         self.animais = []
         self.interessados = []
-        
-# Método para cadastrar um animal
+
+    # Método para cadastrar um animal
     def cadastrar_animal(self, animal):
-        self.animais.append(animal)        
-# Método para cadastrar um interessado
+        self.animais.append(animal)
+
+    # Método para cadastrar um interessado
     def cadastrar_interessado(self, interessado):
         self.interessados.append(interessado)
-        
-# Método para pesquisar animal por características
+
+    # Método para pesquisar animal por características
     def pesquisar_animal(self, tipo, idade, cor, porte, particularidade):
         resultados = []
         for animal in self.animais:
@@ -46,7 +46,7 @@ class SistemaAdocao:
             ):
                 resultados.append(animal)
         return resultados
-    
+
     # Método para gerar relatório de cruzamento de espécies disponíveis x possíveis candidatos
     def gerar_relatorio(self):
         relatorio = []
@@ -60,12 +60,13 @@ class SistemaAdocao:
             )
             relatorio.append((interessado, candidatos))
         return relatorio
-    
-    # Função para tratar erros de entrada inválida do usuário
+
+# Função para tratar erros de entrada inválida do usuário
 def tratar_erro():
     print("Entrada inválida. Tente novamente.")
     sys.exit(1)
-    
+
+# Função para exibir o menu e obter a escolha do usuário
 def exibir_menu():
     print("=== Sistema de Adoção de Animais ===")
     print("1. Cadastrar animal")
@@ -75,6 +76,7 @@ def exibir_menu():
     print("5. Sair")
     escolha = input("Escolha uma opção: ")
     return escolha
+
 # Função para cadastrar um animal
 def cadastrar_animal(sistema):
     tipo = input("Tipo do animal: ")
@@ -82,7 +84,10 @@ def cadastrar_animal(sistema):
     cor = input("Cor: ")
     porte = input("Porte: ")
     particularidade = input("Particularidade: ")
-    
+    animal = Animal(tipo, idade, cor, porte, particularidade)
+    sistema.cadastrar_animal(animal)
+    print("Animal cadastrado com sucesso!")
+
 # Função para cadastrar um interessado
 def cadastrar_interessado(sistema):
     nome = input("Nome: ")
@@ -92,8 +97,9 @@ def cadastrar_interessado(sistema):
     interessado = Interessado(nome, contato, especie, preferencia)
     sistema.cadastrar_interessado(interessado)
     print("Interessado cadastrado com sucesso!")
-    
- def pesquisar_animal(sistema):
+
+# Função para pesquisar animal por características
+def pesquisar_animal(sistema):
     tipo = input("Tipo do animal: ")
     idade = input("Idade aproximada: ")
     cor = input("Cor: ")
@@ -106,8 +112,8 @@ def cadastrar_interessado(sistema):
             print(animal.tipo, animal.idade, animal.cor, animal.porte, animal.particularidade)
     else:
         print("Nenhum animal encontrado.")
-    
- # Função para gerar relatório
+
+# Função para gerar relatório
 def gerar_relatorio(sistema):
     relatorio = sistema.gerar_relatorio()
     if len(relatorio) > 0:
@@ -119,7 +125,7 @@ def gerar_relatorio(sistema):
                 print(animal.tipo, animal.idade, animal.cor, animal.porte, animal.particularidade)
     else:
         print("Nenhum interessado cadastrado.")
-        
+
 # Função principal
 def main():
     sistema = SistemaAdocao()
@@ -137,7 +143,7 @@ def main():
             sys.exit(0)
         else:
             tratar_erro()
-            
- # Executar o programa
+
+# Executar o programa
 if __name__ == "__main__":
     main()
