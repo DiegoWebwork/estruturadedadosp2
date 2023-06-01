@@ -2,6 +2,7 @@
 #interrompendo a execução do programa com um código de saída 1. Isso é uma maneira de lidar com erros e terminar o programa de forma controlada.
 import sys
 
+
 # Classe para representar um animal
 class Animal:
     def __init__(self, tipo, idade, cor, porte, particularidade):
@@ -143,7 +144,7 @@ def main():
             sys.exit(0)
         else:
             tratar_erro()
-
+# sys.exit(): É uma função usada para encerrar a execução do programa imediatamente.
 # Executar o programa
 if __name__ == "__main__":
     main()
