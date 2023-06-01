@@ -23,7 +23,7 @@ Os alunos anotaram atentamente a todas as observações, criaram o fluxograma do
 Sera Criado um sistema de gerenciamento de adoção de animais. Esse sistema permitirá cadastrar os animais disponíveis para adoção, bem como as informações relacionadas a eles, e também cadastrar pessoas interessadas em adotar um animal.
 
 # Fluxograma:
-Foi Feito Um Fluxograma do Projeto, Com Intuito de Organizar o Caso para Maior Entendimendo  do protótipo em python.
+Foi Feito Um Fluxograma do Projeto Entregado para os alunos de Engenharia de Software, Com Intuito de Organizar o Caso para Maior Entendimendo do projeto em um todo, Foi criado um  protótipo inicial em python somente em texto apenas para validar a proposta do programa junto com ao solicitante.
 ![Fluxograma final](https://github.com/DiegoWebwork/estruturadedadosp2/assets/127268469/7093bc69-31d5-45da-8415-daa035dc7ede)
 
 
