@@ -137,3 +137,7 @@ def main():
             sys.exit(0)
         else:
             tratar_erro()
+            
+ # Executar o programa
+if __name__ == "__main__":
+    main()
