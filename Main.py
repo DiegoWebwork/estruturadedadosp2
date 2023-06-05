@@ -20,11 +20,7 @@ class Pessoa:
 
 
   # fazer um sistema para cadastrar animal e pessoa
-   # Esse def e o de para inserir novo tipo de animal, pode olhar  e ver se ta tudo certo dps eu finalizo essa parte e mando aq. dps so arrumamos o codigo na segunda.
-def inserir_tipo_animal(dicionario_animais):
-    tipo = input("Digite o novo tipo de animal: ")
-    dicionario_animais[tipo] = []
-
+   
 def cadastrar_animal(dicionario_animais):
     tipo = input("Digite o tipo do animal: ")
     if tipo in dicionario_animais:
