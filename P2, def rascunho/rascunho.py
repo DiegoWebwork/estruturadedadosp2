@@ -30,6 +30,15 @@ class SistemaAdocao:
     def cadastrar_animal(self, animal):
         self.animais.append(animal)
 
+    # Método para pesquisar animal por espécie e porte
+    def pesquisar_animal_por_especie_e_porte(self, especie, porte):
+        resultados = []
+        for animal in self.animais:
+            if animal.tipo == especie and animal.porte == porte:
+                resultados.append(animal)
+        return resultados
+
+
     # Método para cadastrar um interessado
     def cadastrar_interessado(self, interessado):
         self.interessados.append(interessado)
@@ -52,13 +61,7 @@ class SistemaAdocao:
     def gerar_relatorio(self):
         relatorio = []
         for interessado in self.interessados:
-            candidatos = self.pesquisar_animal(
-                interessado.especie,
-                None,
-                None,
-                None,
-                interessado.preferencia
-            )
+            candidatos = self.pesquisar_animal_por_especie_e_porte(interessado.especie, interessado.preferencia)
             relatorio.append((interessado, candidatos))
         return relatorio
 
@@ -123,7 +126,10 @@ def gerar_relatorio(sistema):
             print("Interessado:", interessado.nome, interessado.contato)
             print("Candidatos:")
             for animal in candidatos:
-                print(animal.tipo, animal.idade, animal.cor, animal.porte, animal.particularidade)
+                print("Espécie:", animal.tipo)
+                print("Idade:", animal.idade)
+                print("Porte:", animal.porte)
+                print("--------")
     else:
         print("Nenhum interessado cadastrado.")
 
