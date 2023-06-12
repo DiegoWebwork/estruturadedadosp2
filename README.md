@@ -3,8 +3,8 @@
 # Curso: Engenharia de Software
 # Alunos: Diego Rios dos Santos (202010774), Lucas De Santana Pulcherio(202211037).
 # Disciplina: Estrutura de dados 3º Periodo
-# Professor: Marcio Alexandre Dias Garrido
-*Professor:* [Márcio Alexandre Dias Garrido](https://github.com/marciogarridoLaCop)
+# Professor: [Márcio Alexandre Dias Garrido](https://github.com/marciogarridoLaCop)
+
 
 
 
