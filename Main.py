@@ -1,3 +1,9 @@
+#a importação de sys é usada para chamar a função sys.exit(1) no caso de uma entrada inválida do usuário, 
+#interrompendo a execução do programa com um código de saída 1. Isso é uma maneira de lidar com erros e terminar o programa de forma controlada.
+import sys
+
+
+# Classe para representar um animal
 class Animal:
     def __init__(self, tipo, idade, cor, porte, particularidade):
         self.tipo = tipo
@@ -6,67 +12,145 @@ class Animal:
         self.porte = porte
         self.particularidade = particularidade
 
-
-class Pessoa:
-    def __init__(self, nome,contato, idade, tipo_animal, idade_animal, cor_animal, porte_animal, particularidade_animal):
+# Classe para representar uma pessoa interessada em adotar
+class Interessado:
+    def __init__(self, nome, contato, especie, preferencia):
         self.nome = nome
         self.contato = contato
-        self.idade = idade
-        self.tipo_animal = tipo_animal
-        self.idade_animal = idade_animal
-        self.cor_animal = cor_animal
-        self.porte_animal = porte_animal
-        self.particularidade_animal = particularidade_animal
+        self.especie = especie
+        self.preferencia = preferencia
 
-
-  # fazer um sistema para cadastrar animal e pessoa
-   
-def cadastrar_animal(dicionario_animais):
-    tipo = input("Digite o tipo do animal: ")
-    if tipo in dicionario_animais:
-        idade = input("Digite a idade do animal: ")
-        cor = input("Digite a cor do animal: ")
-        porte = input("Digite o porte do animal: ")
-        particularidade = input("Digite alguma particularidade do animal: ")
-
-        animal = Animal(tipo, idade, cor, porte, particularidade)
-        dicionario_animais[tipo].append(animal)
-        print("Animal cadastrado com sucesso!")
-    else:
-        print("Tipo de animal não existe.")
-
-
+# Classe para representar o sistema de adoção
 class SistemaAdocao:
     def __init__(self):
         self.animais = []
-        self.pessoas = []
+        self.interessados = []
 
-    def cadastro_animal(self, tipo, idade, cor, porte, particularidade):
-        animal = Animal(tipo, idade, cor, porte, particularidade)
+    # Método para cadastrar um animal
+    def cadastrar_animal(self, animal):
         self.animais.append(animal)
-        print('Animal cadastrado com sucesso!')
 
-    def cadastro_pessoa(self, nome, contato, especie_interesse, preferencia):
-        pessoa = Pessoa(nome, contato, especie_interesse, preferencia)
-        self.pessoas.append(pessoa)
-        print('Pessoa cadastrada com sucesso!')
-
-    def buscar_animais_por_caracteristicas(self, especie_interesse, preferencia):
-        animais_encontrados = []
+    # Método para pesquisar animal por espécie e porte
+    def pesquisar_animal_por_especie_e_porte(self, especie, porte):
+        resultados = []
         for animal in self.animais:
-            if animal.tipo == especie_interesse and animal.cor == preferencia:
-                animais_encontrados.append(animal)
-        return animais_encontrados
+            if animal.tipo == especie and animal.porte == porte:
+                resultados.append(animal)
+        return resultados
 
+
+    # Método para cadastrar um interessado
+    def cadastrar_interessado(self, interessado):
+        self.interessados.append(interessado)
+
+    # Método para pesquisar animal por características
+    def pesquisar_animal(self, tipo, idade, cor, porte, particularidade):
+        resultados = []
+        for animal in self.animais:
+            if (
+                animal.tipo == tipo
+                and animal.idade == idade
+                and animal.cor == cor
+                and animal.porte == porte
+                and animal.particularidade == particularidade
+            ):
+                resultados.append(animal)
+        return resultados
+
+    # Método para gerar relatório de cruzamento de espécies disponíveis x possíveis candidatos
     def gerar_relatorio(self):
-        relatorio = "Relatório de cruzamento de espécies disponíveis x possíveis candidatos:\n"
-        for pessoa in self.pessoas:
-            animais_encontrados = self.buscar_animais_por_caracteristicas(pessoa.especie_interesse, pessoa.preferencia)
-            relatorio += f"Nome: {pessoa.nome}\nContato: {pessoa.contato}\nAnimais encontrados:\n"
-            if animais_encontrados:
-                for animal in animais_encontrados:
-                    relatorio += f"Tipo: {animal.tipo}, Cor: {animal.cor}, Porte: {animal.porte}\n"
-            else:
-                relatorio += "Nenhum animal encontrado\n"
-            relatorio += "\n"
+        relatorio = []
+        for interessado in self.interessados:
+            candidatos = self.pesquisar_animal_por_especie_e_porte(interessado.especie, interessado.preferencia)
+            relatorio.append((interessado, candidatos))
         return relatorio
+
+# Função para tratar erros de entrada inválida do usuário
+def tratar_erro():
+    print("Entrada inválida. Tente novamente.")
+    sys.exit(1)
+
+# Função para exibir o menu e obter a escolha do usuário
+def exibir_menu():
+    print("=== Sistema de Adoção de Animais ===")
+    print("1. Cadastrar animal")
+    print("2. Cadastrar interessado")
+    print("3. Pesquisar animal por características")
+    print("4. Gerar relatório")
+    print("5. Sair")
+    escolha = input("Escolha uma opção: ")
+    return escolha
+
+# Função para cadastrar um animal
+def cadastrar_animal(sistema):
+    tipo = input("Tipo do animal: ")
+    idade = input("Idade aproximada: ")
+    cor = input("Cor: ")
+    porte = input("Porte: ")
+    particularidade = input("Particularidade: ")
+    animal = Animal(tipo, idade, cor, porte, particularidade)
+    sistema.cadastrar_animal(animal)
+    print("Animal cadastrado com sucesso!")
+
+# Função para cadastrar um interessado
+def cadastrar_interessado(sistema):
+    nome = input("Nome: ")
+    contato = input("Contato: ")
+    especie = input("Espécie de animal desejada: ")
+    preferencia = input("Preferência do animal: ")
+    interessado = Interessado(nome, contato, especie, preferencia)
+    sistema.cadastrar_interessado(interessado)
+    print("Interessado cadastrado com sucesso!")
+
+# Função para pesquisar animal por características
+def pesquisar_animal(sistema):
+    tipo = input("Tipo do animal: ")
+    idade = input("Idade aproximada: ")
+    cor = input("Cor: ")
+    porte = input("Porte: ")
+    particularidade = input("Particularidade: ")
+    resultados = sistema.pesquisar_animal(tipo, idade, cor, porte, particularidade)
+    if len(resultados) > 0:
+        print("Animais encontrados:")
+        for animal in resultados:
+            print(animal.tipo, animal.idade, animal.cor, animal.porte, animal.particularidade)
+    else:
+        print("Nenhum animal encontrado.")
+
+# Função para gerar relatório
+def gerar_relatorio(sistema):
+    relatorio = sistema.gerar_relatorio()
+    if len(relatorio) > 0:
+        print("Relatório de cruzamento de espécies disponíveis x possíveis candidatos:")
+        for interessado, candidatos in relatorio:
+            print("Interessado:", interessado.nome, interessado.contato)
+            print("Candidatos:")
+            for animal in candidatos:
+                print("Espécie:", animal.tipo)
+                print("Idade:", animal.idade)
+                print("Porte:", animal.porte)
+                print("--------")
+    else:
+        print("Nenhum interessado cadastrado.")
+
+# Função principal
+def main():
+    sistema = SistemaAdocao()
+    while True:
+        escolha = exibir_menu()
+        if escolha == "1":
+            cadastrar_animal(sistema)
+        elif escolha == "2":
+            cadastrar_interessado(sistema)
+        elif escolha == "3":
+            pesquisar_animal(sistema)
+        elif escolha == "4":
+            gerar_relatorio(sistema)
+        elif escolha == "5":
+            sys.exit(0)
+        else:
+            tratar_erro()
+# sys.exit(): É uma função usada para encerrar a execução do programa imediatamente.
+# Executar o programa
+if __name__ == "__main__":
+    main()
