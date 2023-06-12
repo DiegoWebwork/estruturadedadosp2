@@ -1,7 +1,7 @@
 [![N|Solid](https://universidadedevassouras.edu.br/wp-content/uploads/2022/03/campus_marica.png)](https://universidadedevassouras.edu.br/campus-marica/)
 
 # Curso: Engenharia de Software
-# Alunos: [Diego Rios dos Santos](https://github.com/DiegoWebwork/estruturadedadosp2) (202010774), [Lucas De Santana Pulcherio](https://github.com/DiegoWebwork/estruturadedadosp2)(202211037).
+# Alunos: [Diego Rios dos Santos](https://github.com/DiegoWebwork/estruturadedadosp2) (202010774), [Lucas De Santana Pulcherio](https://github.com/LucasSantanaa?tab=repositories)(202211037).
 # Disciplina: Estrutura de dados 3º Periodo
 # Professor: [Márcio Alexandre Dias Garrido](https://github.com/marciogarridoLaCop)
 
