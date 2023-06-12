@@ -23,15 +23,15 @@ Os alunos anotaram atentamente a todas as observações, criaram o fluxograma do
 Sera Criado um sistema de gerenciamento de adoção de animais. Esse sistema permitirá cadastrar os animais disponíveis para adoção, bem como as informações relacionadas a eles, e também ira cadastrar pessoas interessadas em adotar um animal.
 Abaixo imagens mostrando o codigo em si e o script rodando:
 
-Primera parte foi criar as classes e alguns metodos.
+Primeiro ato foi criar as classes e alguns metodos.
 
 ![codigo_menu](https://github.com/DiegoWebwork/estruturadedadosp2/blob/main/imagens_p2/classes%20e%20metodos%20crus.png)
 
-segundo o tratamento de possiveis erros de entrada do usuario e o menu interativo.
+Segundo o tratamento de possiveis erros de entrada do usuario e o menu interativo.
 
 ![codigo_menu](https://github.com/DiegoWebwork/estruturadedadosp2/blob/main/imagens_p2/tramento%20de%20erros-e-menu.png)
 
-aqui vemos o menu em modo de Texto para o Prototipo do Projeto.
+Aqui vemos o menu em modo de Texto para o prototipo do projeto.
 
 ![codigo_menu](https://github.com/DiegoWebwork/estruturadedadosp2/assets/127268469/12695397-ee06-43b1-91ab-6a3dd493fc12)
 
