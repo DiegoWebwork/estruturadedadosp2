@@ -18,6 +18,9 @@ Os alunos do curso de Engenharia de Software foram convocados para a reunião co
 A prefeitura precisa de um sistema que possa cadastrar todos os animais por tipo (canino, felino, etc.) e para tanto, é uma premissa que seja possível inserir novos tipos dinamicamente. Precisa ainda, que sejam classificados por idade aproximada, cor, porte e se possui alguma particularidade. No mesmo sistema, deverá ter também um cadastro de pessoas interessadas na adoção, contendo os dados principais de contato e qual espécie teria o interesse de adotar. Ao escolher a espécie, deve também informar se possui alguma preferência do animal. Por fim, no final do mês a prefeitura emitirá um relatório de cruzamento de espécies disponíveis x possíveis candidatos, ou quando um candidato a adoção ligar, que o atendente possa pesquisar se há algum animal com as características informadas.
 Os alunos anotaram atentamente a todas as observações, criaram o fluxograma do estudo de caso, e posteriormente o primeiro protótipo em Python, ainda que em modo texto, e sem requisitos gráficos. A ideia foi apenas validar a proposta do programa junto ao solicitante.
 
+# Fluxograma:
+Foi Feito Um Fluxograma do Projeto Entregado para os alunos de Engenharia de Software, Com Intuito de Organizar o Caso para Maior Entendimendo do projeto em um todo, Foi criado um  protótipo inicial em python somente em texto apenas para validar a proposta do programa junto com ao solicitante.
+![Fluxograma final](https://github.com/DiegoWebwork/estruturadedadosp2/assets/127268469/7093bc69-31d5-45da-8415-daa035dc7ede)
 
 # Solução do Grupo:
 Sera Criado um sistema de gerenciamento de adoção de animais. Esse sistema permitirá cadastrar os animais disponíveis para adoção, bem como as informações relacionadas a eles, e também ira cadastrar pessoas interessadas em adotar um animal.
@@ -46,27 +49,3 @@ Apos O Cadastro do Animal No Sistema, Foi Criado Um Cadastro de Uma Pessoa Inter
 Com Os Cadastros Salvos No Sistema, Foi Criado Um Relatorio de Cruzamento de Espécies Disponiveis x Possíveis Candidatos.
 
 ![codigo_relatorio_exemplo](https://github.com/DiegoWebwork/estruturadedadosp2/assets/127268469/edb862e0-52de-45ce-a847-d40ba5a27e56)
-
-
-
-# Fluxograma:
-Foi Feito Um Fluxograma do Projeto Entregado para os alunos de Engenharia de Software, Com Intuito de Organizar o Caso para Maior Entendimendo do projeto em um todo, Foi criado um  protótipo inicial em python somente em texto apenas para validar a proposta do programa junto com ao solicitante.
-![Fluxograma final](https://github.com/DiegoWebwork/estruturadedadosp2/assets/127268469/7093bc69-31d5-45da-8415-daa035dc7ede)
-
-# Resultado No Programa:
-Primera Parte Foi Montar O Menu Em Modo de Texto para o Prototipo do Projeto.
-
-![codigo_menu](https://github.com/DiegoWebwork/estruturadedadosp2/assets/127268469/12695397-ee06-43b1-91ab-6a3dd493fc12)
-
-Com O Menu Ja Criado e Mostrado Acima, Foi Criado Um Cadastro de Um Animal como exemplo.
-
-![codigo_cadastro_animal](https://github.com/DiegoWebwork/estruturadedadosp2/assets/127268469/00c5e24a-323f-4775-a1be-4f5a08c54cac)
-
-Apos O Cadastro do Animal No Sistema, Foi Criado Um Cadastro de Uma Pessoa Interessada na Adoção Como Exemplo.
-
-![codigo_cadastro_pessoa](https://github.com/DiegoWebwork/estruturadedadosp2/assets/127268469/02a7e4d7-41dc-448d-bfb8-b660a8439229)
-
-Com Os Cadastros Salvos No Sistema, Foi Criado Um Relatorio de Cruzamento de Espécies Disponiveis x Possíveis Candidatos.
-
-![codigo_relatorio_exemplo](https://github.com/DiegoWebwork/estruturadedadosp2/assets/127268469/edb862e0-52de-45ce-a847-d40ba5a27e56)
-
